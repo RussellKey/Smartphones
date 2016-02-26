@@ -12,13 +12,21 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 and extracted and then also assumes that you have copied the files 
 
 features.txt
+
 activity_labels.txt
+
 subject_train.txt
+
 subject_test.txt
+
 y_train.txt
+
 y_test.txt
+
 x_train.txt
+
 x_test.txt
+
 
 to a single directory and set you working directory to this.
 
