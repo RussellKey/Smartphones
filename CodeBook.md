@@ -17,17 +17,17 @@ subject - the subject number (1-30)
 
 activity - the activity label 
 
-1 WALKING
+  1 WALKING
 
-2 WALKING_UPSTAIRS
+  2 WALKING_UPSTAIRS
 
-3 WALKING_DOWNSTAIRS
+  3 WALKING_DOWNSTAIRS
 
-4 SITTING
+  4 SITTING
 
-5 STANDING
+  5 STANDING
 
-6 LAYING
+  6 LAYING
 
 
 The remaining variables in the tidy dataset are the average of each variable in the raw data set corresponding to measurements on the mean and standard deviation by subject by activity.
