@@ -1,7 +1,7 @@
 UCI Human Activity Recognition Using Smartphones Data Set
 ==========
 
-This repo contains **run_analysis.R**, which will create a tidy dataset from the UCI Human Activity Recognition Using Smartphones Dataset collected from the accelerometers from the Samsung Galaxy S smartphone. A full description of source data is available at the site where the data was obtained: 
+This repo contains **run_analysis.R**, which will create a tidy dataset from the UCI Human Activity Recognition Using Smartphones Dataset collected from the accelerometers from the Samsung Galaxy S II smartphone worn on the waist. A full description of source data is available at the site where the data was obtained: 
 
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
 
@@ -17,8 +17,8 @@ and extracted and then also assumes that you have copied the files
 - subject_test.txt
 - y_train.txt
 - y_test.txt
-- x_train.txt
-- x_test.txt
+- X_train.txt
+- X_test.txt
 
 to a single directory and set you working directory to this.
 
