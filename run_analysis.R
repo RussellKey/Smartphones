@@ -30,21 +30,14 @@ SmartPhones <- dplyr::union(testset, trainset)
 
 # 4. Appropriately labels the data set with descriptive variable names. 
 
-# colnames(SmartPhones) <- c("Subject", "act", as.character(features[,2]))
-
 valid_column_names <- make.names(names=names(SmartPhones), unique=TRUE, allow_ = TRUE)
 colnames(SmartPhones) <- valid_column_names
 
 # 2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 # Extract mean() and std() columns
 
-# Verify this returns only those columns needed
-# std = 33
-# mean = 56
-# angle = 10(-)
-# + 2 = 81
 SP <- select(SmartPhones, Subject, Activity, contains("mean"), contains("std"), -contains("angle"))
-# names(SP)
+
 
 # 3. Uses descriptive activity names to name the activities in the data set
 SP_ActivityNames <- inner_join(SP, activity_lables, by = c("Activity" = "id"))
@@ -56,9 +49,12 @@ SP_ActivityNames <- select(SP_ActivityNames, Subject, activity, everything())
 # and each subject.
 
 # melt
-SmartPhonesMelt <- melt(SP_ActivityNames, id=c("Subject","activity"), measure.vars=c(as.character(names(SP_ActivityNames[,3:ncol(SP_ActivityNames)]))))
+#SmartPhonesMelt <- melt(SP_ActivityNames, id=c("Subject","activity"), measure.vars=c(as.character(names(SP_ActivityNames[,3:ncol(SP_ActivityNames)]))))
+SmartPhonesMelt <- melt(SP_ActivityNames, id=c("Subject","activity"))
 
 # dcast - tidy data set
 SmartPhonesDcast <- dcast(SmartPhonesMelt, Subject + activity ~ variable, mean)
+
+write.table(SmartPhonesDcast, file="./tidySmartPhones.txt", row.names=FALSE)
 
                                
