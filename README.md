@@ -20,7 +20,7 @@ and extracted and then also assumes that you have copied the files
 - X_train.txt
 - X_test.txt
 
-to a single directory and set you working directory to this.
+to a single directory and have set your working directory to this.
 
 run_analysis.R will then process the data:
 
